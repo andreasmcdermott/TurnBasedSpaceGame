@@ -1,9 +1,9 @@
-function Enemy(x, y) {
+function Entity(x, y) {
   this.x = x;
   this.y = y;
 }
 
-Enemy.prototype = {
+Entity.prototype = {
   render: function (camera) {
     camera.fillStyle('blue');
     camera.fillCircle(this.x, this.y, 25);
@@ -13,4 +13,4 @@ Enemy.prototype = {
   }
 };
 
-module.exports = Enemy;
+module.exports = Entity;

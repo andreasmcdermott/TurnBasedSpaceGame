@@ -1,6 +1,4 @@
-var Enemy = require('./enemy');
-var Player = require('./player');
-var Camera = require('./camera');
+var Entity = require('./entity');
 
 playground({
   smoothing: false,
@@ -17,10 +15,10 @@ playground({
     this.min = {x: 0, y: 0};
     this.max = {x: 0, y: 0};
     this.entities = [];
-    this.entities.push(new Player(0, 0));
-    this.entities.push(new Enemy(-200, -200));
-    this.entities.push(new Enemy(0, -150));
-    this.entities.push(new Enemy(200, -200));
+    this.entities.push(new Entity(0, 0));
+    this.entities.push(new Entity(-200, -200));
+    this.entities.push(new Entity(0, -150));
+    this.entities.push(new Entity(200, -200));
   },
   step: function (dt) {
     for (var i = 0; i < this.entities.length; ++i) {
