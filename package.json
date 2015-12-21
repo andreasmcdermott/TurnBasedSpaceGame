@@ -1,0 +1,25 @@
+{
+  "name": "amcd-space-game",
+  "description": "A turn based space game.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Andreas McDermott",
+    "email": "andreasmcdermott@gmail.com",
+    "url": "http://www.andreasmcdermott.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreasmcdermott/TurnBasedSpaceGame.git"
+  },
+  "scripts": {
+    "test": "tap tst/*.js"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "tape": "^4.2.2"
+  }
+}
