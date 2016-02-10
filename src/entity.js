@@ -1,16 +1,14 @@
-function Entity(x, y) {
+export default function Entity(x, y) {
   this.x = x;
   this.y = y;
 }
 
 Entity.prototype = {
-  render: function (camera) {
+  render (camera) {
     camera.fillStyle('blue');
     camera.fillCircle(this.x, this.y, 25);
   },
-  update: function (dt) {
+  update (dt) {
     
   }
 };
-
-module.exports = Entity;

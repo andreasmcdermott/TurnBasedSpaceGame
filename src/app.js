@@ -1,25 +1,25 @@
-var Entity = require('./entity');
+import Entity from './entity';
 
 playground({
   smoothing: false,
   canvasWidth: 640,
   canvasHeight: 480,
   
-  preload: function () {
+  preload () {
   },  
-  create: function () {
+  create () {
     this.scale = this.width / this.canvasWidth;
     this.min = {x: 0, y: 0};
     this.max = {x: 0, y: 0};
     this.entities = [];
   },  
-  ready: function () {
+  ready () {
     this.entities.push(new Entity(0, 0));
     this.entities.push(new Entity(-200, -200));
     this.entities.push(new Entity(0, -150));
     this.entities.push(new Entity(200, -200));
   },
-  step: function (dt) {
+  step (dt) {
     for (var i = 0; i < this.entities.length; ++i) {
       var entity = this.entities[i];   
       entity.update(dt);
@@ -38,7 +38,7 @@ playground({
       }
     }
   },
-  render: function () {
+  render () {
     this.layer.clear('black');
     
     var w = this.max.x - this.min.x;
